@@ -1,0 +1,239 @@
+body {
+  background: #F7F7F7;
+  color: #222;
+  font-family: Ubuntu;
+  font-size: 1em;
+  margin: 0;
+}
+
+h1, h2, h3, table {
+  font-weight: normal;
+}
+
+p {
+  text-align: justify;
+  font-size: 1.15em;
+}
+
+p.company {
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+p.position {
+  margin: 0;
+  font-weight: 600;
+}
+
+ul {
+  list-style: none;
+  padding-left: 1em;
+  margin: 0;
+  font-size: 1.15em;
+}
+
+ul li table {
+  padding-left: 1em;
+}
+
+li.additional-info {
+  font-size: 0.75em;
+  color: gray;
+}
+
+.wrapper {
+  display: block;
+  margin: auto;
+  padding: 2em 3em;
+  background: #fff;
+  width: 60%;
+}
+
+h1.name {
+  margin: 0;
+  text-align: center;
+  font-size: 2.5em;
+}
+
+h3.skill-position {
+  text-align: center;
+  font-size: 0.75em;
+  color: gray;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header .face, .info {
+}
+
+.face {
+  order: 2;
+}
+
+.info {
+  order: 1;
+}
+
+h2.chapter {
+  color: #7C94BF;
+  padding-top: 10px;
+  font-size: 1.75em;
+}
+
+h2.chapter.reset-top {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.tbl-info {
+  font-size: 1.15em;
+}
+
+.tbl-info td {
+  padding-bottom: 0.25em;
+}
+
+.tbl-info td:first-child {
+  text-align: right;
+}
+
+.tbl-info td:last-child {
+  padding-left: 1em;
+}
+
+.tbl-skills {
+  font-size: 1.15em;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.tbl-skills thead tr td {
+  border-bottom: 1px solid #222;
+  padding: 1em 0 0.5em 0;
+  font-weight: 600;
+}
+
+
+.link {
+  color: #7C94BF;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: none;
+}
+
+.link.black {
+  color: #222;
+}
+
+.btn_print {
+  display: block;
+  margin: 1em auto 0;
+  font-size: 1.5em;
+  background: #dedcdc;
+  border: none;
+  line-height: 2em;
+  padding: 0 5em;
+}
+
+@media screen and (max-width: 1400px) {
+  .wrapper {
+    width: 65%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .wrapper {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .wrapper {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .wrapper {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .wrapper {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .wrapper {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    width: 90%;
+  }
+
+  .header {
+    flex-direction: column-reverse;
+  }
+
+  .face {
+    margin: auto;
+  }
+
+  .info table {
+    margin: auto;
+  }
+
+  h2.chapter.reset-top {
+  margin-top: 1em;
+  padding-top: 10px;
+}
+}
+
+@media print {
+  @page {
+    size: auto;
+  }
+
+  body {
+    /*margin: 0;
+    padding: 0;*/
+    font-size: 15px;
+  }
+
+  .wrapper {
+    width: 100%;
+    padding: 0;
+  }
+
+  a.skype:after {
+    content: " ( "attr(data-name)" )";
+  }
+
+  a.print-hide {
+    display: none;
+  }
+
+  li.additional-info {
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  .tbl-skills thead tr td {
+    padding: 5px 0 5px 0;
+  }
+
+  .btn_print {
+    display: none;
+  }
+}
