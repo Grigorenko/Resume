@@ -113,7 +113,7 @@ h2.chapter.reset-top {
 
 .tbl-skills thead tr td {
   border-bottom: 1px solid #222;
-  padding: 1em 0 0.5em 0;
+  padding: 1em 0.2em 0.5em 0;
   font-weight: 600;
 }
 
@@ -173,13 +173,17 @@ h2.chapter.reset-top {
 
 @media screen and (max-width: 800px) {
   .wrapper {
-    width: 90%;
+    width: 85%;
+  }
+
+  li.additional-info {
+    font-size: 1em;
   }
 }
 
 @media screen and (max-width: 600px) {
   .wrapper {
-    width: 90%;
+    width: 74%;
   }
 
   .header {
@@ -194,10 +198,14 @@ h2.chapter.reset-top {
     margin: auto;
   }
 
+  .tbl-info {
+    font-size: 1em;
+  }
+
   h2.chapter.reset-top {
-  margin-top: 1em;
-  padding-top: 10px;
-}
+    margin-top: 1em;
+    padding-top: 10px;
+  }
 }
 
 @media print {
