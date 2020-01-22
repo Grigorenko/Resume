@@ -5,8 +5,314 @@
   <title>CV</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-  <link href="cv.css" rel="stylesheet" crossorigin="anonymous" />
+  <!--<link href="cv.css" rel="stylesheet" crossorigin="anonymous" />-->
+  <style>
+    body {
+      background: #F7F7F7;
+      color: #222;
+      font-family: Ubuntu;
+      font-size: 1em;
+      margin: 0;
+    }
 
+    h1, h2, h3, table {
+      font-weight: normal;
+    }
+
+    p {
+      text-align: justify;
+      font-size: 1.15em;
+    }
+
+    p.company {
+      margin-bottom: 0;
+      font-weight: 600;
+    }
+
+    p.position {
+      margin: 0;
+      font-weight: 600;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 1em;
+      margin: 0;
+      font-size: 1.15em;
+    }
+
+    ul li table {
+      padding-left: 1em;
+    }
+
+    li.additional-info {
+      font-size: 0.75em;
+      color: gray;
+    }
+
+    .wrapper {
+      display: block;
+      margin: auto;
+      padding: 2em 3em;
+      background: #fff;
+      width: 60%;
+    }
+
+    h1.name {
+      margin: 0;
+      text-align: center;
+      font-size: 2.5em;
+    }
+
+    h3.skill-position {
+      text-align: center;
+      font-size: 0.75em;
+      color: gray;
+    }
+
+    .header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .header .face, .info {
+    }
+
+    .face {
+      order: 2;
+    }
+
+    .info {
+      order: 1;
+    }
+
+    h2.chapter {
+      color: #7C94BF;
+      padding-top: 10px;
+      font-size: 1.75em;
+    }
+
+    h2.chapter.reset-top {
+      margin-top: 0;
+      padding-top: 0;
+    }
+
+    .tbl-info {
+      font-size: 1.15em;
+    }
+
+    .tbl-info td {
+      padding-bottom: 0.25em;
+    }
+
+    .tbl-info td:first-child {
+      text-align: right;
+    }
+
+    .tbl-info td:last-child {
+      padding-left: 1em;
+    }
+
+    .link {
+      color: #7C94BF;
+      text-decoration: none;
+    }
+
+    .link:hover {
+      text-decoration: none;
+    }
+
+    .link.black {
+      color: #222;
+    }
+
+    .btn_print {
+      display: block;
+      margin: 1em auto 0;
+      font-size: 1.5em;
+      background: #dedcdc;
+      border: none;
+      line-height: 2em;
+      padding: 0 5em;
+    }
+
+
+    .skills-block {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .group-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .head {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.15em;
+      font-weight: bold;
+      border-bottom: 1px solid;
+      padding: 0.5em;
+    }
+
+    .body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .item-name, .item-name-value {
+      width: 40%;
+    }
+
+    .working-experience, .working-experience-value {
+      width: 33%;
+    }
+
+    .level, .level-value {
+      width: 27%;
+    }
+
+    .body-item {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      font-size: 1.15em;
+      padding: 0 0.5em;
+    }
+
+    @media screen and (max-width: 1400px) {
+      .wrapper {
+        width: 65%;
+      }
+    }
+
+    @media screen and (max-width: 1200px) {
+      .wrapper {
+        width: 70%;
+      }
+    }
+
+    @media screen and (max-width: 1100px) {
+      .wrapper {
+        width: 75%;
+      }
+    }
+
+    @media screen and (max-width: 1000px) {
+      .wrapper {
+        width: 80%;
+      }
+    }
+
+    @media screen and (max-width: 900px) {
+      .wrapper {
+        width: 85%;
+      }
+    }
+
+    @media screen and (max-width: 800px) {
+      .wrapper {
+        width: 85%;
+      }
+
+      li.additional-info {
+        font-size: 1em;
+      }
+
+      .level, .level-value {
+        display: none;
+      }
+
+      .item-name, .item-name-value {
+        width: 60%;
+      }
+
+      .working-experience, .working-experience-value {
+        width: 40%;
+      }
+
+      .working-experience, .working-experience-value {
+        text-align: center;
+      }
+
+      .head {
+        padding: 1em 0.5em 0.5em;
+      }
+
+      .body-item {
+        padding: 0.5em 0.5em 0;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .wrapper {
+        width: 74%;
+      }
+
+      .header {
+        flex-direction: column-reverse;
+      }
+
+      .face {
+        margin: auto;
+      }
+
+      .info table {
+        margin: auto;
+      }
+
+      .tbl-info {
+        font-size: 1em;
+      }
+
+      h2.chapter.reset-top {
+        margin-top: 1em;
+        padding-top: 10px;
+      }
+
+      .working-experience, .working-experience-value {
+        text-align: right;
+      }
+    }
+
+    @media print {
+      @page {
+        size: auto;
+      }
+
+      body {
+        /*margin: 0;
+    padding: 0;*/
+        font-size: 15px;
+      }
+
+      .wrapper {
+        width: 100%;
+        padding: 0;
+      }
+
+      a.skype:after {
+        content: " ( "attr(data-name)" )";
+      }
+
+      a.print-hide {
+        display: none;
+      }
+
+      li.additional-info {
+        font-size: 15px;
+        font-weight: bold;
+      }
+
+      .btn_print {
+        display: none;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="wrapper">
